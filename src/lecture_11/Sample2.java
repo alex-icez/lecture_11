@@ -2,6 +2,8 @@ package lecture_11;
 
 class MyThread extends Thread {	
 	
+	int result;
+	
 	public MyThread(String name) {
 		super(name);
 	}
