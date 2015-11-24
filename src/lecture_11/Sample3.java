@@ -12,8 +12,7 @@ public class Sample3 {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 		}
-		System.out.println("World ]");
-		
+		System.out.println("World !!! ]");
 	}
 	
 	public static void main(String[] args) {
