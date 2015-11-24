@@ -25,6 +25,7 @@ public class Sample2 {
 		MyThread th2 = new MyThread("second");
 		th1.start();
 		th2.start();
+		System.out.println(Thread.currentThread().getName());
 	}
 
 }
