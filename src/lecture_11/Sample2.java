@@ -28,9 +28,9 @@ public class Sample2 {
 		MyThread th2 = new MyThread("second");
 		th1.start();
 		th2.start();
-		while(th1.isAlive());
-		while(th2.isAlive());
-		//th1.join();
+		//while(th1.isAlive());
+		//while(th2.isAlive());
+		th1.join();
 		//th2.join();
 
 		System.out.println("end main()");
