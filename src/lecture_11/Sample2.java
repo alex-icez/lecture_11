@@ -17,6 +17,7 @@ class MyThread extends Thread {
 				e.printStackTrace();
 			}
 		}
+		result = 10;
 	}
 }
 
@@ -29,6 +30,7 @@ public class Sample2 {
 		th2.start();
 		th1.join();
 		th2.join();
+
 		System.out.println("end main()");
 	}
 
