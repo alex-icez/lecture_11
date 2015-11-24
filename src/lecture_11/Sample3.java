@@ -6,26 +6,13 @@ package lecture_11;
 
 public class Sample3 {
 	
-	static void print() {
-		synchronized (Sample3.class) {
-			System.out.print("[ Hello ");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-			}
-			System.out.println("World !!! ]");
+	synchronized static void print() {
+		System.out.print("[ Hello ");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
 		}
-	}
-	
-	static void print2() {
-		synchronized (Sample3.class) {
-			System.out.print("[ Hello ");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-			}
-			System.out.println("World !!! ]");
-		}
+		System.out.println("World !!! ]");
 	}
 	
 	static class MyThread extends Thread{
