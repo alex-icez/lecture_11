@@ -25,7 +25,7 @@ public class Sample2 {
 		MyThread th2 = new MyThread("second");
 		th1.start();
 		th2.start();
-		Thread.currentThread().stop();
+		System.out.println("end main()");
 	}
 
 }
