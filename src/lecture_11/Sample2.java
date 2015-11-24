@@ -42,9 +42,9 @@ class MyRun implements Runnable {
 	public void run() {
 		stopped.set(false);
 		for(int i = 0; i < 100 && !stopped.get(); i++) {
-			System.out.println(thread.getName() + " " + i);
+			//System.out.println(thread.getName() + " " + i);
 			try {
-				Thread.sleep(System.currentTimeMillis() % 20);
+				Thread.sleep(System.currentTimeMillis() % 20000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -66,6 +66,9 @@ public class Sample2 {
 		th2.start();
 		//while(th1.isAlive());
 		//while(th2.isAlive());
+		for(Thread t : Thread.getAllStackTraces().keySet())
+			System.out.println(t.getName());
+		
 		th1.join();
 		//th2.join();
 
