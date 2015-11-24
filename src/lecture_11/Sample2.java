@@ -1,7 +1,5 @@
 package lecture_11;
-import org.fusesource.jansi.AnsiConsole;
-import static org.fusesource.jansi.Ansi.*;
-import static org.fusesource.jansi.Ansi.Color.*;
+
 class MyThread extends Thread {	
 	
 	int result;
@@ -36,7 +34,7 @@ public class Sample2 {
 		th1.join();
 		//th2.join();
 
-		System.out.println(ansi().fg(RED).a("Hello World").reset());
+	
 	}
 
 }
