@@ -5,11 +5,9 @@ package lecture_11;
 
 
 public class Sample3 {
-
-	static Object obj = new Object();
 	
 	static void print() {
-		synchronized (obj) {
+		synchronized (Sample3.class) {
 			System.out.print("[ Hello ");
 			try {
 				Thread.sleep(1000);
