@@ -12,11 +12,15 @@ class Tree<T extends Comparable<T>> {
 		}
 	}
 	
-	T root = null;
+	Node root = null;
 	
-	void 
+	void add(T value) {
+		
 	
-	
+		
+		
+		
+	}
 }
 
 
