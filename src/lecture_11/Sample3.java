@@ -9,7 +9,6 @@ public class Sample3 {
 	static Object obj = new Object();
 	
 	static void print() {
-		
 		synchronized (obj) {
 			System.out.print("[ Hello ");
 			try {
