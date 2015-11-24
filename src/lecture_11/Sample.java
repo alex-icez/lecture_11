@@ -15,5 +15,11 @@ public class Sample {
 						map.put(key, new LinkedList<>());
 					map.get(key).add("" + i1 + i2 + i3);
 				}
+		for(LinkedList<String> list : map.values()) 
+			for(String p1 : list)
+				for(String p2 : list)
+					System.out.println(p1 + p2);
+			
+			
 	}
 }
