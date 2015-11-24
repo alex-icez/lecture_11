@@ -19,7 +19,5 @@ public class Sample {
 			for(String p1 : list)
 				for(String p2 : list)
 					System.out.println(p1 + p2);
-			
-			
 	}
 }
