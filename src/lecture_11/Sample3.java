@@ -24,5 +24,10 @@ public class Sample3 {
 	public static void main(String[] args) {
 		new MyThread().start();
 		new MyThread().start();
+		
+		Object obj = new Object();
+
+		
+		
 	}
 }
