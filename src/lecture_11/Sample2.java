@@ -13,9 +13,9 @@ class MyThread extends Thread {
 	public void run() {
 		
 		for(int i = 0; i < 100; i++) {
-			System.out.println(this.getName() + " " + i);
+			//System.out.println(this.getName() + " " + i);
 			try {
-				Thread.sleep(System.currentTimeMillis() % 20);
+				Thread.sleep(System.currentTimeMillis() % 2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
