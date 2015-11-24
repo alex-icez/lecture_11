@@ -32,8 +32,12 @@ class MyRun implements Runnable {
 		thread.start();
 	}
 	
+	public void stopped() {
+		stopped = true;
+	}
+	
 	public void run() {
-		for(int i = 0; i < 100; i++) {
+		for(int i = 0; i < 100 && !stopped; i++) {
 			System.out.println(this.getName() + " " + i);
 			try {
 				Thread.sleep(System.currentTimeMillis() % 20);
