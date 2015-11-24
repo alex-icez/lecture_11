@@ -15,7 +15,7 @@ class Tree<T extends Comparable<T>> {
 	Node root = null;
 	
 	void add(T value) {
-		
+		Node node = new Node(value);
 	
 		
 		
