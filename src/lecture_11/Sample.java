@@ -11,9 +11,9 @@ public class Sample {
 			for(int i2 = 0; i2 < 10; i2++)
 				for(int i3 = 0; i3 < 10; i3++) {
 					key = i1 + i2 + i3;
-					if (!map.containsKey(i1 + i2 + i3)) 
-						map.put(key, value)
-		
+					if (!map.containsKey(key)) 
+						map.put(key, new LinkedList<>());
+					map.get(key).add("" + i1 + i2 + i3);
 				}
 	}
 }
