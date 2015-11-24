@@ -6,13 +6,18 @@ package lecture_11;
 
 public class Sample3 {
 
+	static Object obj = new Object();
+	
 	static void print() {
-		System.out.print("[ Hello ");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
+		
+		synchronized (obj) {
+			System.out.print("[ Hello ");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
+			System.out.println("World !!! ]");
 		}
-		System.out.println("World !!! ]");
 	}
 	
 	static class MyThread extends Thread{
