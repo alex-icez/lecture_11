@@ -23,7 +23,7 @@ public class Sample3 {
 	
 	
 	public static void main(String[] args) {
-		print();
-
+		new MyThread().start();
+		new MyThread().start();
 	}
 }
