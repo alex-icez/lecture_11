@@ -1,5 +1,7 @@
 package lecture_11;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 class MyThread extends Thread {	
 	
 	int result;
@@ -33,12 +35,12 @@ class MyRun implements Runnable {
 	}
 	
 	synchronized public void stopped() {
-		stopped = true;
+		stopped.set(true);
 	}
 	
 	public void run() {
-		stopped = false;
-		for(int i = 0; i < 100 && !stopped; i++) {
+		stopped.set(false);
+		for(int i = 0; i < 100 && !stopped.get(); i++) {
 			System.out.println(thread.getName() + " " + i);
 			try {
 				Thread.sleep(System.currentTimeMillis() % 20);
