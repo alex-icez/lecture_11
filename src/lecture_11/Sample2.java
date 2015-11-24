@@ -34,7 +34,7 @@ public class Sample2 {
 		th1.join();
 		//th2.join();
 
-		System.out.println("\033[0m BLABLA \033[0m\n");
+		System.out.println("\[36mbla-bla-bla");
 	}
 
 }
