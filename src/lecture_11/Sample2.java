@@ -5,7 +5,7 @@ class MyThread extends Thread {
 		for(int i = 0; i < 100; i++) {
 			System.out.println(i);
 			try {
-				Thread.sleep(System.currentTimeMillis() % 200);
+				Thread.sleep(System.currentTimeMillis());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
