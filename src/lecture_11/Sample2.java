@@ -7,13 +7,13 @@ class MyThread extends Thread {
 	}
 	
 	public void run() {
-		for(int i = 0; i < 100; i++) {
+		for(int i = 0; i > -1; i++) {
 			System.out.println(this.getName() + " " + i);
-			try {
-				Thread.sleep(System.currentTimeMillis() % 200000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+		//	try {
+		//		Thread.sleep(System.currentTimeMillis() % 200000);
+		//	} catch (InterruptedException e) {
+		//		e.printStackTrace();
+		//	}
 		}
 	}
 }
