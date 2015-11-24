@@ -25,14 +25,14 @@ class MyThread extends Thread {
 class MyRun implements Runnable {
 	
 	private Thread thread;
-	private boolean stopped;
+	private AtomicBoolean stopped;
 	
 	public MyRun() {
 		thread = new Thread(this);
 		thread.start();
 	}
 	
-	public void stopped() {
+	synchronized public void stopped() {
 		stopped = true;
 	}
 	
