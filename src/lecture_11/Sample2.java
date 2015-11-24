@@ -3,9 +3,9 @@ package lecture_11;
 class MyThread extends Thread {	
 	public void run() {
 		for(int i = 0; i < 100; i++) {
-			System.out.println(i);
+			System.out.println(this.getName() + " " + i);
 			try {
-				Thread.sleep(System.currentTimeMillis());
+				Thread.sleep(System.currentTimeMillis() % 200);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
