@@ -17,6 +17,17 @@ public class Sample3 {
 		}
 	}
 	
+	static void print2() {
+		synchronized (Sample3.class) {
+			System.out.print("[ Hello ");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
+			System.out.println("World !!! ]");
+		}
+	}
+	
 	static class MyThread extends Thread{
 		public void run() {
 			print();
