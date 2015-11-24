@@ -23,7 +23,16 @@ class MyThread extends Thread {
 }
 
 class MyRun implements Runnable {
-	
+	public void run() {
+		for(int i = 0; i < 100; i++) {
+			System.out.println(this.getName() + " " + i);
+			try {
+				Thread.sleep(System.currentTimeMillis() % 20);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }
 
 
@@ -31,6 +40,11 @@ class MyRun implements Runnable {
 public class Sample2 {
 
 	public static void main(String[] args) throws InterruptedException {
+		MyRun mr = new MyRun();
+		Thread t = new Thread(mr);
+		t.start();
+		
+		
 		MyThread th1 = new MyThread("first");
 		MyThread th2 = new MyThread("second");
 		th1.start();
