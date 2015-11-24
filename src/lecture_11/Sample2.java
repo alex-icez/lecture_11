@@ -25,6 +25,7 @@ class MyThread extends Thread {
 class MyRun implements Runnable {
 	
 	private Thread thread;
+	private boolean stopped;
 	
 	public MyRun() {
 		thread = new Thread(this);
