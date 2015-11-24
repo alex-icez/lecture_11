@@ -26,6 +26,11 @@ class MyRun implements Runnable {
 	
 	private Thread thread;
 	
+	public MyRun() {
+		thread = new Thread(this);
+		thread.start();
+	}
+	
 	public void run() {
 		for(int i = 0; i < 100; i++) {
 			System.out.println(this.getName() + " " + i);
@@ -43,7 +48,7 @@ class MyRun implements Runnable {
 public class Sample2 {
 
 	public static void main(String[] args) throws InterruptedException {
-		
+		MyRun r = new MyRun();
 		
 		
 		MyThread th1 = new MyThread("first");
