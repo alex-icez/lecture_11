@@ -7,8 +7,15 @@ class Tree<T extends Comparable<T>> {
 		T value;
 		Node left;
 		Node right;
-		
+		public Node(T value) {
+			this.value = value;
+		}
 	}
+	
+	T root = null;
+	
+	void 
+	
 	
 }
 
