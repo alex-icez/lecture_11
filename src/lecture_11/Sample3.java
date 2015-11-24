@@ -15,6 +15,13 @@ public class Sample3 {
 		System.out.println("World !!! ]");
 	}
 	
+	static class MyThread extends Thread{
+		public void run() {
+			print();
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 		print();
 
