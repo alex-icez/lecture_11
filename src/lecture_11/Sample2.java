@@ -35,7 +35,8 @@ class MyRun implements Runnable {
 	}
 	
 	synchronized public void stopped() {
-		stopped.set(true);
+		if (!stopped.get())
+			stopped.set(true);
 	}
 	
 	public void run() {
