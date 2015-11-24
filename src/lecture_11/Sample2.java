@@ -34,7 +34,8 @@ public class Sample2 {
 		th1.join();
 		//th2.join();
 
-		System.out.println("end main()");
+		System.out.println((char) 27 + "\\[31mWarning! " + (char)27 + "\\[0m");
+		
 	}
 
 }
