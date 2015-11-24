@@ -20,8 +20,7 @@ public class Sample3 {
 			print();
 		}
 	}
-	
-	
+
 	public static void main(String[] args) {
 		new MyThread().start();
 		new MyThread().start();
