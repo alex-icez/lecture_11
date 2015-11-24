@@ -27,7 +27,7 @@ class MyThread extends Thread {
 class MyRun implements Runnable {
 	
 	private Thread thread;
-	private AtomicBoolean stopped;
+	private AtomicBoolean stopped = new AtomicBoolean();
 	
 	public MyRun() {
 		thread = new Thread(this);
